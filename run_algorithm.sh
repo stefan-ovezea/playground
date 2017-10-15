@@ -7,7 +7,6 @@ fi
 INPUT_FILE=$1
 OUTPUT_FILE=$(echo $1 | sed -e 's/.cpp/.o/g')
 
-
 echo "Compiling $INPUT_FILE..."
 g++ -std=c++14 $INPUT_FILE -o $OUTPUT_FILE
 
