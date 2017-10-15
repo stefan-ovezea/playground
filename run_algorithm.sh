@@ -10,9 +10,13 @@ OUTPUT_FILE=$(echo $1 | sed -e 's/.cpp/.o/g')
 
 echo "Compiling $INPUT_FILE..."
 g++ $INPUT_FILE -o $OUTPUT_FILE
-echo "Done compiling. Program output: "
 
-./$OUTPUT_FILE
-echo "Cleaning up..."
-rm -rf $OUTPUT_FILE
-echo "Done."
+if [[ -f $OUTPUT_FILE ]]; then
+    echo "Compile successful. Program output: "
+    ./$OUTPUT_FILE
+    echo "Cleaning up..."
+    rm -rf $OUTPUT_FILE
+    echo "Done."
+else
+    echo "Done."
+fi
