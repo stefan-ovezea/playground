@@ -6,7 +6,7 @@ int main() {
     int arr[] = {11, 21, 34, 45, 53, 67, 78, 82, 96, 110, 123};
     int num = 78;
     
-    binarySearch();
+    binarySearch(arr, num);
     return 0;
 }
 
