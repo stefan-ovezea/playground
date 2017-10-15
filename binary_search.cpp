@@ -29,9 +29,9 @@ int binarySearch(auto &arr, int num) {
             std::cout << "Finished after " << operationsCounter << " operations.\n";
             return mid;
         } else if (arr[mid] <= num) {
-            leftPos = mid;
+            leftPos = mid + 1;
         } else {
-            rigthPos = mid;
+            rigthPos = mid - 1;
         }
         operationsCounter++;
     }
