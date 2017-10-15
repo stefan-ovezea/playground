@@ -9,7 +9,7 @@ OUTPUT_FILE=$(echo $1 | sed -e 's/.cpp/.o/g')
 
 
 echo "Compiling $INPUT_FILE..."
-g++ $INPUT_FILE -o $OUTPUT_FILE
+g++ -std=c++14 $INPUT_FILE -o $OUTPUT_FILE
 
 if [[ -f $OUTPUT_FILE ]]; then
     echo "Compile successful. Program output: "
